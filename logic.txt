@@ -1,0 +1,34 @@
+void loop
+	{read sensor
+	if (ph < batas bahwah)
+		{while(ph < mean batas bawah, batas atas)
+			{value on
+			5 sec
+			valve1 off
+			read ph
+			}
+		}
+	if (ph > batas akhir)
+		{while (ph > mean batas bawah, batas atas}
+			{valve2 on
+			5 sec
+			valve 2 off
+			read ph
+			}
+		}
+	if (tds < 200)
+		{while (tds < 250)
+			{valve3 on
+			5 sec
+			valve3 off
+			}
+		}
+	}
+
+web
+if(temp < batas bawah)
+	{notif to user
+	}
+else (temp > batas bawah)
+	{notif to user
+	}
