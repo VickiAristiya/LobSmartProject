@@ -2,8 +2,8 @@
 #include <PubSubClient.h>
 #include <max6675.h>
 
-const char* ssid = "MARKAZ"; // Your Wi-Fi SSID
-const char* password = "harvestaugust"; // Your Wi-Fi Password
+const char* ssid = "****"; // Your Wi-Fi SSID
+const char* password = "****"; // Your Wi-Fi Password
 const char* mqtt_server = "broker.hivemq.com"; // MQTT Broker
 const int mqtt_port = 1883; // MQTT Port
 
@@ -107,9 +107,9 @@ void loop() {
     Serial.println(pHValue, 2);
 
     // Publish the sensor data to MQTT topics
-    client.publish("0897_water_monitoring/temp", String(temperature).c_str());
-    client.publish("0897_water_monitoring/tds", String(tdsValue).c_str());
-    client.publish("0897_water_monitoring/ph", String(pHValue, 2).c_str());
+    client.publish("Topic_temp", String(temperature).c_str());
+    client.publish("Topic_tds", String(tdsValue).c_str());
+    client.publish("Topic_ph", String(pHValue, 2).c_str());
 
     printTime = millis();
   }
